@@ -135,7 +135,7 @@ class PdoGsb{
 
     */
     public function getLesTablette(){
-        $req = "SELECT refVisiteur , idtablette , type , memoire , memoireExt  FROM tablette";
+        $req = "SELECT nom, idtablette , type , memoire , memoireExt FROM visiteur, tablette WHERE visiteur.id = tablette.refVisiteur";
                 $stmt = PdoGsb::$monPdo->prepare($req);
                 $stmt->execute();
         $lesTablettes = $stmt->fetchAll();
