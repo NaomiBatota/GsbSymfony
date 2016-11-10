@@ -3,8 +3,6 @@ parameters:
     db.name: dbname=bd_gsb
     db.user: root
 
-    db.mdp: naomisept
-
     db.mdp: root
 services:
     pg_gsb_frais.pdo:
