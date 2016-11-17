@@ -5,10 +5,14 @@
 
 {{parent()}}
 <div id="contenu">    
-
-  
+Visiteurs : 
             <select name="id">
             {% for visiteur in visiteurs %}
             <option value="{{visiteur.id}}">{{visiteur.id}}
             {% endfor %}</select>
+
+            <input type="button" name="Valider" value="Valider"
+            onclick="self.location.href='{{path('pg_gsb_frais_listeaffectation')}}'"   >
+
 </div>
+{% endblock %}
