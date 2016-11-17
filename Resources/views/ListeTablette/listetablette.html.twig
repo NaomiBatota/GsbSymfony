@@ -6,6 +6,10 @@
 {{parent()}}
 <div id="contenu">
 
+<<<<<<< HEAD
+=======
+      <h2>Liste des tablettes et leurs affectations
+>>>>>>> 5f57fe59323c9c2adaad7c30607c0c07f4868604
       
 <table classe="listeLegere">
        <tr>
@@ -14,6 +18,7 @@
        <th> Type de Tablette</th>
        <th> Mémoire Interne</th>
        <th> Mémoire Externe</th>
+      
        </tr>
        {%for uneListe in lesTablettes%} 
        <tr>
@@ -24,11 +29,16 @@
        <td>{{uneListe.type}}</td>
        <td>{{uneListe.memoire}} </td>
        <td>{{uneListe.memoireExt}}</td>
+       
        </br>
    </tr>
    {% endfor %}
 </table>   
        
+<<<<<<< HEAD
      </div> 
 
+=======
+     </div> s
+>>>>>>> 5f57fe59323c9c2adaad7c30607c0c07f4868604
 {% endblock %}

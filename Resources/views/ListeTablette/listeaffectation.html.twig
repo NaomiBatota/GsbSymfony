@@ -6,7 +6,7 @@
 {{parent()}}
 <div id="contenu">
       <h2>Liste des tablettes et leurs affectations
-      Visiteur {{ id_viisteur}}
+      
   <table classe="listeLegere">
          <tr>
            <th> Visiteurs</th>
@@ -14,6 +14,7 @@
            <th> Type de Tablette</th>
            <th> Mémoire Interne</th>
            <th> Mémoire Externe</th>
+           <th> Date d'Affectation</th>
          </tr>
          {%for uneListe in lesTablettes%} 
          <tr>
@@ -22,6 +23,7 @@
            <td>{{uneListe.type}}</td>
            <td>{{uneListe.memoire}} </td>
            <td>{{uneListe.memoireExt}}</td>
+           <td>{{uneListe.dateAffectation}}</td>
          </br>
      </tr>
      {% endfor %}
