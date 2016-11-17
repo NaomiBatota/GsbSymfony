@@ -5,9 +5,11 @@
 
 {{parent()}}
 <div id="contenu">
-
       <h2>Liste des tablettes et leurs affectations
       
+
+
+
 <table classe="listeLegere">
        <tr>
        <th> Visiteurs</th>
@@ -29,7 +31,10 @@
    </tr>
    {% endfor %}
 </table>   
-       
+            <select name="code">
+            <option value="'{{ var_id_visiteur}}'">' {{ var_id_visiteur}}</option>
+            </select>
+
      </div> 
 
 {% endblock %}

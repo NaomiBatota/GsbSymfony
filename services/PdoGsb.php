@@ -143,6 +143,22 @@ class PdoGsb{
         return $lesTablettes;
     }
 
+        /**
+     * Retourne les visiteurs 
+
+    */
+    public function getLesVisiteurs(){
+
+        $req = "SELECT id FROM visiteur";
+                $stmt = PdoGsb::$monPdo->prepare($req);
+                $stmt->execute();
+        $lesTablettes = $stmt->fetchAll();
+        return $lesTablettes;
+    }
+
+
+
+
 
 /**
  * Met à jour la table ligneFraisForfait
