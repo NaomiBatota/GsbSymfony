@@ -5,11 +5,9 @@
 
 {{parent()}}
 <div id="contenu">
+
       <h2>Liste des tablettes et leurs affectations
       
-
-
-
 <table classe="listeLegere">
        <tr>
        <th> Visiteurs</th>
@@ -17,6 +15,7 @@
        <th> Type de Tablette</th>
        <th> Mémoire Interne</th>
        <th> Mémoire Externe</th>
+      
        </tr>
        {%for uneListe in lesTablettes%} 
        <tr>
@@ -27,14 +26,11 @@
        <td>{{uneListe.type}}</td>
        <td>{{uneListe.memoire}} </td>
        <td>{{uneListe.memoireExt}}</td>
+       
        </br>
    </tr>
    {% endfor %}
 </table>   
-            <select name="code">
-            <option value="'{{ var_id_visiteur}}'">' {{ var_id_visiteur}}</option>
-            </select>
-
-     </div> 
-
+       
+     </div> s
 {% endblock %}
