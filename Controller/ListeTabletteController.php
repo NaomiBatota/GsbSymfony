@@ -12,7 +12,18 @@ class ListeTabletteController extends Controller
 	{
         $pdo = $this->get('pg_gsb_frais.pdo');
         $lesTablettes=$pdo->getLesTablette(); 
-                    return $this->render('PgGsbFraisBundle:ListeTablette:listetablette.html.twig', array('lesTablettes'=>$lesTablettes));
+                    return $this->render('PgGsbFraisBundle:ListeTablette:listetablette.html.twig',
+                     array('lesTablettes'=>$lesTablettes));
+
+    }
+
+    public function lesVisiteursAction()
+
+    {
+    	        $pdo = $this->get('pg_gsb_frais.pdo');
+        		$visiteurs=$pdo->getLesVisiteurs(); 
+
+                return $this->render('PgGsbFraisBundle:ListeTablette:listetablette.html.twig', array('visiteurs'=>$visiteurs));
 
     }
 }

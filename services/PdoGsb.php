@@ -152,8 +152,8 @@ class PdoGsb{
         $req = "SELECT id FROM visiteur";
                 $stmt = PdoGsb::$monPdo->prepare($req);
                 $stmt->execute();
-        $lesTablettes = $stmt->fetchAll();
-        return $lesTablettes;
+            
+        return $stmt;
     }
 
 
