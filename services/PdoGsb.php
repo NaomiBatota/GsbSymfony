@@ -156,10 +156,17 @@ class PdoGsb{
         return $stmt;
     }
 
+    /**
+    *Retourne les visteurs sans tablettes
 
+    */
+        public function getVisiteursSansTab(){
+        $req= "SELECT count(*) from visiteur where not exists (SELECT * from tablette where tablette.refVisiteur = visiteur.id)";
+                $stmt = PdoGsb::$monPdo->prepare($req);
+                $stmt-> execute();
 
-
-
+        return $stmt;
+            }
 
 /**
  * Met à jour la table ligneFraisForfait

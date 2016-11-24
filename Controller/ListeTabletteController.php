@@ -17,6 +17,15 @@ class ListeTabletteController extends Controller
 
     }
 
+    public function getVisiteursSansTabAction() 
+    {
+        $pdo = $this->get('pg_gsb_frais.pdo');
+        $VisiteursSansTab=$pdo->getVisiteursSansTab(); 
+                    return $this->render('PgGsbFraisBundle:ListeTablette:listeaffectation.html.twig',
+                     array('VisiteursSansTab'=>$VisiteursSansTab));
+
+    }
+
     public function lesVisiteursAction()
 
     {
