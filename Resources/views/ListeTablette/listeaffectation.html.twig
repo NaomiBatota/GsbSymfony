@@ -4,9 +4,7 @@
 
 
 {{parent()}}
-<div id="contenu">
-      
-      
+<div id="contenu">      
   <table classe="listeLegere">
          <tr>
            <th> Visiteurs</th>
@@ -17,6 +15,7 @@
            <th> Date d'Affectation</th>
          </tr>
          {%for uneListe in lesTablettes%} 
+          {% if app.request.get('code') == uneListe.refVisiteur  %}
          <tr>
            <td>{{uneListe.refVisiteur}}</td>
            <td>{{uneListe.idtablette}}</td>
@@ -26,9 +25,9 @@
            <td>{{uneListe.dateAffectation}}</td>
          </br>
      </tr>
+     {%endif%}
      {% endfor %}
-  </table>
-
+  </table>   
 </div> 
 
 {% endblock %}

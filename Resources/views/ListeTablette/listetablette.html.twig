@@ -5,13 +5,14 @@
 
 {{parent()}}
 <div id="contenu">    
-Visiteurs : 
-            <form action="{{path('pg_gsb_frais_listeaffectation')}}" method="post">
+Visiteurs :
+              
+            <form action="{{path('pg_gsb_frais_listeaffectation')}}">
               <select name="code">
-              {% for visiteur in visiteurs %}
+
+			{% for visiteur in visiteurs %}
                 <option value="{{visiteur.id}}">{{visiteur.id}}
-               
-              {% endfor %}
+            {% endfor %}
               </select>
               <input type="submit" value="Valider"/>
             </form>  
