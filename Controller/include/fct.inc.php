@@ -214,8 +214,8 @@ function valideInfosFrais($dateFrais,$libelle,$montant){
 		if( !is_numeric($montant) ){
 			$lesErreurs[] = "Le champ montant doit être numérique";
 		}
-                echo "erreurs:";
-                var_dump($lesErreurs);
+                //echo "erreurs:";
+                //var_dump($lesErreurs);
         return $lesErreurs;        
 }
 
